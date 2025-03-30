@@ -20,7 +20,7 @@ const Hero = () => {
             <span className="text-primary">Data Team Leader</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
-            Data, Tech & AI expert with 7+ years of experience leading innovations in the energy sector.
+            Data, Tech & AI professional with 7+ years of experience leading innovations in the energy sector.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button onClick={scrollToAbout} className="group" size="lg">
