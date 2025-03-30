@@ -17,14 +17,14 @@ const Footer = () => {
 
           <div className="flex space-x-6">
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:riccardo.malabarba7@gmail.com"
               className="hover:text-white transition-colors"
               aria-label="Email"
             >
               <Mail className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/in/rmalabarba"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"

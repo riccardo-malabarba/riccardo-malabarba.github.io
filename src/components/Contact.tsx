@@ -8,7 +8,8 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: "Email",
-      value: "riccardo.malabarba7@gmail.com"
+      value: "riccardo.malabarba7@gmail.com",
+      href:"mailto:riccardo.malabarba7@gmail.com"
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
@@ -68,19 +69,21 @@ const Contact = () => {
                   ))}
                 </div>
                 <div className="mt-8">
-                  <Button size="lg" className="w-full">
-                    Download Resume
-                  </Button>
+                  <a href="https://drive.google.com/file/d/1KLFCpeiHkKIHZviKzgNlodyDOc7TeBfO/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="w-full">
+                    <Button size="lg" className="w-full">
+                      Check My Resume
+                    </Button>
+                  </a>
                 </div>
-              </div>
 
+              </div>
+              
               <div className="flex flex-col justify-center">
                 <div className="text-center p-6 bg-accent rounded-lg">
-                  <h3 className="text-xl font-semibold mb-4">Open to Opportunities</h3>
+                  <h3 className="text-xl font-semibold mb-4">Let's Talk!</h3>
                   <p className="text-muted-foreground mb-6">
-                    I'm currently exploring new challenges in technology leadership, 
-                    particularly in areas related to data engineering, AI implementation, 
-                    and sustainable tech solutions.
+                    If you want to get in touch to start an open discussion
+                    on data and technology.
                   </p>
                   <Button variant="outline" size="lg" asChild>
                     <a href="mailto:riccardo.malabarba7@gmail.com">
