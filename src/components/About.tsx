@@ -34,13 +34,6 @@ const About = () => {
       </div>
 
       <div className="flex flex-col md:flex-row items-center max-w-4xl mx-auto mb-16 space-y-6 md:space-y-0 md:space-x-12">
-        <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg">
-          <img 
-            src={`https://images.unsplash.com/photo-1581092795360-fd1ca04f0952`} 
-            alt="Riccardo Malabarba" 
-            className="w-full h-full object-cover"
-          />
-        </div>
         <div>
           <p className="text-lg leading-relaxed mb-6">
             Highly motivated and results-driven technology leader with +7 years of experience in the energy and sustainability sector. 

@@ -8,20 +8,19 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: "Email",
-      value: "your.email@example.com",
-      link: "mailto:your.email@example.com"
+      value: "riccardo.malabarba7@gmail.com"
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       label: "LinkedIn",
-      value: "linkedin.com/in/yourprofile",
-      link: "https://linkedin.com/in/yourprofile"
+      value: "linkedin.com/in/rmalabarba",
+      link: "https://linkedin.com/in/rmalabarba"
     },
     {
       icon: <Github className="h-6 w-6" />,
       label: "GitHub",
-      value: "github.com/yourusername",
-      link: "https://github.com/yourusername"
+      value: "github.com/riccardo.malabarba",
+      link: "https://github.com/riccardo-malabarba"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
@@ -68,7 +67,6 @@ const Contact = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="mt-8">
                   <Button size="lg" className="w-full">
                     Download Resume
@@ -85,7 +83,7 @@ const Contact = () => {
                     and sustainable tech solutions.
                   </p>
                   <Button variant="outline" size="lg" asChild>
-                    <a href="mailto:your.email@example.com">
+                    <a href="mailto:riccardo.malabarba7@gmail.com">
                       <Mail className="mr-2 h-4 w-4" />
                       Email Me
                     </a>
