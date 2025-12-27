@@ -16,15 +16,21 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <Button variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
-              <Linkedin className="h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
-              <Github className="h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
-              <Mail className="h-5 w-5" />
-            </Button>
+            <a href="https://www.linkedin.com/in/rmalabarba" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </a>
+            <a href="https://github.com/riccardo-malabarba" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
+                <Github className="h-5 w-5" />
+              </Button>
+            </a>
+            <a href="mailto:riccardo.malabarba7@gmail.com">
+              <Button variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
+                <Mail className="h-5 w-5" />
+              </Button>
+            </a>
           </div>
           
           <Button 
