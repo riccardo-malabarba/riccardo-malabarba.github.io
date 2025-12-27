@@ -38,7 +38,7 @@ const Navigation = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="text-lg font-bold text-foreground hover:text-primary transition-colors"
           >
-            Portfolio
+            Riccardo Malabarba
           </button>
           
           {/* Desktop Navigation */}
