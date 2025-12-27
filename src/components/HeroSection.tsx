@@ -19,14 +19,11 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="animate-fade-in">
-          <p className="text-primary font-mono text-sm md:text-base mb-4 tracking-wider uppercase">
-            Head of Data & AI
-          </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight">
-            Driving Digital
-            <span className="block text-primary">Transformation</span>
+            Head of
+            <span className="block text-primary">Data & AI</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-8 leading-relaxed font-medium">
             Technology leader building innovative data and cloud solutions in energy, industrial, and sustainability sectors.
           </p>
           
