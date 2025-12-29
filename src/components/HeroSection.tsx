@@ -1,6 +1,7 @@
 import { ArrowDown, Github, Mail, Linkedin, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import { motion } from "framer-motion";
 const HeroSection = () => {
   const scrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({
@@ -16,7 +17,12 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="animate-fade-in">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="animate-fade-in"
+        >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight">
             Riccardo<span className="block text-primary">Malabarba</span>
           </h1>
@@ -51,7 +57,7 @@ const HeroSection = () => {
           <Button onClick={scrollToAbout} variant="ghost" className="animate-bounce text-muted-foreground hover:text-primary">
             <ArrowDown className="h-6 w-6" />
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>;
 };
