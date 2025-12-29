@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Github, ArrowUp } from "lucide-react";
+import { ArrowUp, Github, Mail, Linkedin, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -12,25 +12,30 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-lg font-semibold text-card-foreground">Head of Data & AI</p>
-            <p className="text-sm text-muted-foreground">Driving Digital Transformation</p>
+            <p className="text-sm text-muted-foreground font-medium">Driving Digital Transformation</p>
           </div>
-          
+
           <div className="flex items-center gap-4">
-            <a href="https://www.linkedin.com/in/rmalabarba" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-            </a>
-            <a href="https://github.com/riccardo-malabarba" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
+            <Button asChild variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
+              <a href="https://github.com/riccardo-malabarba" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
-              </Button>
-            </a>
-            <a href="mailto:riccardo.malabarba7@gmail.com">
-              <Button variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
+              <a href="mailto:riccardo.malabarba7@gmail.com">
                 <Mail className="h-5 w-5" />
-              </Button>
-            </a>
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
+              <a href="https://www.linkedin.com/in/rmalabarba" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="icon" className="border-border hover:bg-primary hover:text-primary-foreground transition-all">
+              <a href="https://medium.com/@riccardo.malabarba7" target="_blank" rel="noopener noreferrer">
+                <BookOpen className="h-5 w-5" />
+              </a>
+            </Button>
           </div>
           
           <Button 
