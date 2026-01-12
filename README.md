@@ -1,6 +1,15 @@
-# Riccardo Malabarba - Personal Portfolio
+# Riccardo Malabarba - Portfolio Website
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Showcases professional experience in data and AI leadership.
+A stunning, modern portfolio website showcasing expertise in Data & AI leadership in the energy sector. Features interactive particle animations, theme-aware design, and a comprehensive professional showcase.
+
+## ✨ Key Features
+
+- 🎨 **Interactive Particle Network**: Animated hero section with theme-aware particle system (blue in light mode, green in dark mode)
+- 🌓 **Dark Mode**: Smooth theme switching with system preference support and consistent backgrounds
+- 📱 **Fully Responsive**: Optimized for mobile, tablet, and desktop
+- 🔒 **Secure Configuration**: Environment variables for sensitive data
+- ⚡ **High Performance**: Optimized animations and lazy loading
+- 🎯 **Consistent Design**: All sections share the same theme-aware background
 
 ## 🚀 Quick Start
 
@@ -18,6 +27,10 @@ cd riccardo-malabarba.github.io
 # Install dependencies
 npm install
 
+# Create environment file
+cp .env.example .env
+# Edit .env with your configuration
+
 # Start development server
 npm run dev
 ```
@@ -28,25 +41,29 @@ The application will be available at `http://localhost:8080`
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── ui/             # shadcn/ui components
-│   ├── HeroSection.tsx # Landing section
+├── components/              # Reusable UI components
+│   ├── ui/                 # shadcn/ui components
+│   ├── HeroSection.tsx     # Animated landing with theme-aware particle network
+│   ├── ParticleNetwork.tsx # Interactive particle system with theme colors
+│   ├── ThemeToggle.tsx     # Dark mode toggle
 │   ├── AboutSection.tsx
 │   ├── SkillsSection.tsx
+│   ├── ProjectsSection.tsx
 │   ├── ExperienceSection.tsx
 │   ├── EducationSection.tsx
 │   ├── AwardsSection.tsx
 │   ├── SoftSkillsSection.tsx
+│   ├── ContactSection.tsx
 │   ├── Navigation.tsx
 │   └── Footer.tsx
-├── pages/              # Page components
-│   ├── Index.tsx      # Main portfolio page
-│   └── NotFound.tsx   # 404 page
-├── lib/               # Utilities and helpers
-│   └── utils.ts       # Utility functions
-├── hooks/             # Custom React hooks
-├── assets/            # Static assets (images, etc.)
-└── test/              # Test setup files
+├── pages/                  # Page components
+│   ├── Index.tsx          # Main portfolio page
+│   └── NotFound.tsx       # 404 page
+├── lib/                   # Utilities and helpers
+│   └── utils.ts           # Utility functions
+├── hooks/                 # Custom React hooks
+├── assets/                # Static assets (images, etc.)
+└── test/                  # Test setup files
 ```
 
 ## 🛠️ Available Scripts
@@ -103,16 +120,29 @@ npm run test:ui
 
 ## 🎨 Technologies Used
 
-- **Frontend Framework:** React 18
-- **Build Tool:** Vite
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **UI Components:** shadcn/ui (Radix UI primitives)
-- **Icons:** Lucide React
-- **Routing:** React Router
-- **State Management:** TanStack Query
+### Core Stack
+- **Frontend Framework:** React 18.3.1
+- **Build Tool:** Vite 5.4.21
+- **Language:** TypeScript 5.8.3
+- **Styling:** Tailwind CSS 3.4.17
+- **Package Manager:** npm
+
+### UI & Design
+- **Component Library:** shadcn/ui (Radix UI primitives)
+- **Icons:** Lucide React 0.462.0
+- **Animations:** Framer Motion 12.23.26
+- **Theme Management:** next-themes 0.3.0
+- **3D Graphics:** Three.js + @react-three/fiber
+
+### Utilities
+- **Routing:** React Router DOM 6.30.1
+- **State Management:** TanStack Query 5.83.0
+- **Form Handling:** React Hook Form 7.61.1 + Zod
 - **Testing:** Vitest + React Testing Library
 - **Linting:** ESLint
+
+### Backend/Services
+- **Contact Form:** Formspree (environment variable configured)
 - **Deployment:** GitHub Pages
 
 ## 🚀 Deployment
@@ -123,6 +153,30 @@ This project is configured for automatic deployment to GitHub Pages via GitHub A
 2. GitHub Actions runs tests and linting
 3. If successful, builds and deploys to GitHub Pages
 4. Site is available at `https://riccardo-malabarba.github.io`
+
+### Manual Deployment
+
+```bash
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+### Environment Variables
+
+Before deploying, ensure your environment variables are set:
+
+**Local Development** (`.env`):
+```bash
+VITE_FORMSPREE_ENDPOINT=your_formspree_endpoint
+```
+
+**Production** (GitHub Secrets or hosting platform):
+```bash
+VITE_FORMSPREE_ENDPOINT=your_formspree_endpoint
+```
 
 ## 📝 Development Guidelines
 
@@ -135,11 +189,41 @@ This project is configured for automatic deployment to GitHub Pages via GitHub A
 - Functional components with hooks
 - shadcn/ui for consistent design
 - Responsive design with Tailwind CSS
+- Framer Motion for smooth animations
+- Environment variables for sensitive data
+
+### Performance Best Practices
+- Lazy loading for heavy components
+- Optimized particle count for mobile devices
+- Hardware-accelerated CSS animations
+- Code splitting with Vite
+- Image optimization (recommended)
 
 ### Testing
 - Unit tests for utilities and components
 - Integration tests for user interactions
 - CI/CD pipeline ensures quality
+
+## 📚 Additional Documentation
+
+- **[Implementation Summary](IMPLEMENTATION_SUMMARY.md)**: Detailed breakdown of all new features
+- **[Quick Reference](QUICK_REFERENCE.md)**: Customization guide and troubleshooting
+- **[Customization Guide](CUSTOMIZATION_GUIDE.md)**: How to modify website style and content
+
+## 🎯 Feature Highlights
+
+### Interactive Particle Network
+60 particles (30 on mobile) with mouse interaction and theme-aware colors:
+- **Light Mode**: Blue particles with light blue glow effects
+- **Dark Mode**: Green particles with yellow glow effects
+
+Creates a dynamic data flow visualization that represents the intersection of energy and data.
+
+### Dark Mode
+System-aware theme toggle with smooth transitions and persistent preferences. All sections maintain consistent backgrounds that adapt to the selected theme.
+
+### Responsive Design
+Fully optimized for all device sizes with consistent visual hierarchy and performance.
 
 ## 🤝 Contributing
 
@@ -150,6 +234,19 @@ This project is configured for automatic deployment to GitHub Pages via GitHub A
 5. Ensure linting passes
 6. Submit a pull request
 
+## 📞 Contact
+
+**Riccardo Malabarba**  
+Head of Data & AI  
+📧 riccardo.malabarba7@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/rmalabarba)  
+📝 [Medium](https://medium.com/@riccardo.malabarba7)  
+💻 [GitHub](https://github.com/riccardo-malabarba)
+
 ## 📄 License
 
 This project is private and proprietary.
+
+---
+
+**Built with passion for data and innovation** 🚀

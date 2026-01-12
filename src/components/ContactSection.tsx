@@ -29,7 +29,7 @@ const ContactSection = () => {
 
     try {
       // Using Formspree - replace with your form endpoint
-      const response = await fetch("https://formspree.io/f/mzdbyypq", {
+      const response = await fetch(`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ENDPOINT}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

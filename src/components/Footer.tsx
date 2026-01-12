@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-lg font-semibold text-card-foreground">Head of Data & AI</p>
+            <p className="text-lg font-semibold text-card-foreground">Riccardo Malabarba</p>
             <p className="text-sm text-muted-foreground font-medium">Driving Digital Transformation</p>
           </div>
 

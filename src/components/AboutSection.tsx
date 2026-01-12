@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-card">
+    <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <Badge variant="outline" className="mb-4 text-primary border-primary">
