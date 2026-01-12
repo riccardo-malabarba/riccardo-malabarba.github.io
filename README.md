@@ -132,7 +132,7 @@ npm run test:ui
 - **Icons:** Lucide React 0.462.0
 - **Animations:** Framer Motion 12.23.26
 - **Theme Management:** next-themes 0.3.0
-- **3D Graphics:** Three.js + @react-three/fiber
+- **3D Graphics:** Three.js + @react-three/fiber v8.18.0 + @react-three/drei v9.114.0
 
 ### Utilities
 - **Routing:** React Router DOM 6.30.1
