@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import ParticleNetwork from "./ParticleNetwork";
 
 const HeroSection = () => {
-  const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({
+  const scrollToHighlights = () => {
+    document.getElementById("highlights")?.scrollIntoView({
       behavior: "smooth"
     });
   };
@@ -58,7 +58,7 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          <Button onClick={scrollToAbout} variant="ghost" className="animate-bounce text-muted-foreground hover:text-primary">
+          <Button onClick={scrollToHighlights} variant="ghost" className="animate-bounce text-muted-foreground hover:text-primary">
             <ArrowDown className="h-6 w-6" />
           </Button>
         </motion.div>

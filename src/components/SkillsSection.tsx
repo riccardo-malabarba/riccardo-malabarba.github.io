@@ -40,9 +40,6 @@ const SkillsSection = () => {
     <section id="skills" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-primary border-primary">
-            Expertise
-          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Skills & Technologies
           </h2>

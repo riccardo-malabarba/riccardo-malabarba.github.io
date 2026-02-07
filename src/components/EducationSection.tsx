@@ -98,8 +98,8 @@ const EducationSection = () => {
                 <Card key={index} className="bg-card border-border hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-5">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 bg-accent/20 rounded-lg">
-                        <Award className="h-5 w-5 text-accent" />
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <Award className="h-5 w-5 text-primary" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-card-foreground">{cert.name}</h3>

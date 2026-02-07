@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
+  { href: "#highlights", label: "Highlights" },
+  { href: "#about", label: "About Me" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#education", label: "Education" },
