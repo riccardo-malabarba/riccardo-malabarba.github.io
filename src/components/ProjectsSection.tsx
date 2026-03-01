@@ -4,32 +4,33 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const projects = [
+type ProjectReference = {
+  type: string;
+  url: string;
+};
+
+type Project = {
+  title: string;
+  description: string;
+  technologies: string[];
+  references?: ProjectReference[];
+};
+
+const projects: Project[] = [
   {
     title: "AI-Powered Real-Time Energy Efficiency Tool",
     description: "Developed an intelligent energy monitoring system using machine learning algorithms to optimize energy consumption in industrial facilities. Implemented predictive analytics that reduced energy waste by 25% through real-time anomaly detection and automated efficiency recommendations.",
-    technologies: ["Python", "TensorFlow", "IoT Sensors", "Apache Kafka", "Docker"],
-    references: [
-      { url: "https://www.linkedin.com/posts/rmalabarba_ai-energy-efficiency-machinelearning-activity-1234567890", type: "LinkedIn Post" },
-      { url: "https://medium.com/@riccardo.malabarba7/ai-powered-energy-efficiency-implementation", type: "Medium Article" }
-    ]
+    technologies: ["Python", "Google Cloud Platform", "IoT Platform", "Docker"],
   },
   {
     title: "Data & AI Governance Framework",
     description: "Designed and implemented a comprehensive governance framework for data and AI initiatives across multiple business units. Established data quality standards, compliance protocols, and ethical AI guidelines that ensured regulatory compliance and scalable AI adoption.",
     technologies: ["Data Governance", "GDPR Compliance", "AI Ethics", "Risk Management", "Policy Development"],
-    references: [
-      { url: "https://medium.com/@riccardo.malabarba7/data-ai-governance-framework-implementation", type: "Medium Article" },
-      { url: "https://www.linkedin.com/posts/rmalabarba_data-governance-ai-ethics-activity-1234567891", type: "LinkedIn Post" }
-    ]
   },
   {
     title: "Cloud-Native Data Platform Transformation",
     description: "Led the migration and modernization of legacy data infrastructure to a cloud-native platform, enabling real-time analytics and AI capabilities. Coordinated cross-functional teams to deliver a scalable solution that improved data processing speed by 300%.",
-    technologies: ["Google Cloud Platform", "Kubernetes", "BigQuery", "DataFlow", "Terraform"],
-    references: [
-      { url: "https://www.linkedin.com/posts/rmalabarba_cloud-migration-data-platform-activity-1234567892", type: "LinkedIn Post" }
-    ]
+    technologies: ["Microsoft Fabric", "Power BI", "Informatica IDCS", "BigQuery"],
   }
 ];
 
@@ -75,18 +76,20 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                 </CardContent>
-                <div className="p-6 pt-0 mt-auto">
-                  <div className="flex flex-wrap gap-2">
-                    {project.references.map((ref, refIndex) => (
-                      <Button asChild variant="outline" size="sm" key={refIndex}>
-                        <a href={ref.url} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          {ref.type}
-                        </a>
-                      </Button>
-                    ))}
+                {project.references?.length ? (
+                  <div className="p-6 pt-0 mt-auto">
+                    <div className="flex flex-wrap gap-2">
+                      {project.references.map((ref, refIndex) => (
+                        <Button asChild variant="outline" size="sm" key={refIndex}>
+                          <a href={ref.url} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            {ref.type}
+                          </a>
+                        </Button>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
               </Card>
             </motion.div>
           ))}

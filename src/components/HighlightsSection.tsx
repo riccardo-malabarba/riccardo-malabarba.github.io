@@ -4,9 +4,29 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ExternalLink, Linkedin, Mic, Sparkles, Trophy } from "lucide-react";
+import { ExternalLink, Linkedin, Mic, Sparkles, Trophy, type LucideIcon } from "lucide-react";
 
-const highlights = [
+type HighlightLink = {
+  label: string;
+  href?: string;
+  icon: LucideIcon;
+};
+
+type Highlight = {
+  title: string;
+  description: string;
+  category: string;
+  icon: LucideIcon;
+  embed?: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
+  imagePlaceholder?: string;
+  links?: HighlightLink[];
+};
+
+const highlights: Highlight[] = [
   {
     title: "My Interview at Radio24",
     description: "Listen to my interview during the NetZero Summit 2025, where I've talked about data & AI applied in the energy efficiency sector.",
@@ -16,11 +36,11 @@ const highlights = [
     links: [
       {
         label: "LinkedIn",
-        href: "",
+        href: "https://www.linkedin.com/posts/rmalabarba_dati-algoritmi-e-ospedali-lefficienza-activity-7347917224113799168-TBWy?utm_source=share&utm_medium=member_desktop&rcm=ACoAACTn3DkBpDWJu5OONzB_p75SmFEEAMudAFo",
         icon: Linkedin,
       },
       {
-        label: "External Site",
+        label: "Podcast Episode",
         href: "https://open.spotify.com/episode/6GZHVQTMzzyaHKI6O2ifjt?si=m-GphOsTRmarExEqQNT6RQ&nd=1&dlsi=c09787658ccf4bcc",
         icon: ExternalLink,
       },
@@ -31,35 +51,36 @@ const highlights = [
     description: "Recognized as an AI leader under 35 by IKN, during the CAIO (Chief AI Officer) conference in Milan.",
     category: "Award",
     icon: Sparkles,
-    imagePlaceholder: "IKN Award Photo",
+    image: {
+      src: "/images/ikn-award.png",
+      alt: "IKN Awards ceremony",
+    },
     links: [
       {
         label: "LinkedIn",
-        href: "",
+        href: "https://www.linkedin.com/posts/caio-award-2025-ugcPost-7376279226531856386-4S0C?utm_source=share&utm_medium=member_desktop&rcm=ACoAACTn3DkBpDWJu5OONzB_p75SmFEEAMudAFo",
         icon: Linkedin,
-      },
-      {
-        label: "External Site",
-        href: "",
-        icon: ExternalLink,
-      },
+      }
     ],
   },
   {
-    title: "Award with President Mattarella",
-    description: "Awarded at the presence of the President of Italy, Sergio Mattarella.",
+    title: "G.S.E. Award",
+    description: "Awarded by the national Leonardo Committee at the presence of the President of Italy, Sergio Mattarella.",
     category: "Honor",
     icon: Trophy,
-    imagePlaceholder: "Award Ceremony",
+    image: {
+      src: "/images/premio-leonardo.jfif",
+      alt: "Leonardo Awards ceremony photo",
+    },
     links: [
       {
         label: "LinkedIn",
-        href: "",
+        href: "https://www.linkedin.com/posts/rmalabarba_energy-sustainability-innovation-activity-6848312229385789440-MfzB?utm_source=share&utm_medium=member_desktop&rcm=ACoAACTn3DkBpDWJu5OONzB_p75SmFEEAMudAFo",
         icon: Linkedin,
       },
       {
-        label: "External Site",
-        href: "",
+        label: "Awards Cerimony",
+        href: "https://www.comitatoleonardo.it/it/attivita/giornata-qualita-italia-consegna-dei-premi-leonardo-2/",
         icon: ExternalLink,
       },
     ],
@@ -139,13 +160,23 @@ const HighlightsSection = () => {
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="flex flex-col gap-4">
+                      {highlight.image ? (
+                        <div className="overflow-hidden rounded-lg border border-border/60 bg-background">
+                          <img
+                            src={highlight.image.src}
+                            alt={highlight.image.alt}
+                            className="h-48 w-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : null}
                       {highlight.imagePlaceholder ? (
-                        <div className="flex h-40 items-center justify-center rounded-lg border border-dashed border-border/70 bg-muted/30 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                        <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-border/70 bg-muted/30 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                           {highlight.imagePlaceholder}
                         </div>
                       ) : null}
                       {highlight.embed ? (
-                        <div className="overflow-hidden rounded-lg border border-border/60 bg-background">
+                        <div className="flex h-48 items-center justify-center overflow-hidden rounded-lg bg-transparent">
                           <iframe
                             src={highlight.embed}
                             title="Spotify podcast episode"
