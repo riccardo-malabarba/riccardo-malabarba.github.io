@@ -64,8 +64,8 @@ const highlights: Highlight[] = [
     ],
   },
   {
-    title: "G.S.E. Award",
-    description: "Awarded by the national Leonardo Committee at the presence of the President of Italy, Sergio Mattarella.",
+    title: "Awarded by Leonardo Committee",
+    description: "Attributed the G.S.E. Award for Energy Efficiency Master Thesis at the presence of the President of Italy, Sergio Mattarella.",
     category: "Honor",
     icon: Trophy,
     image: {

@@ -15,7 +15,7 @@ const languages = [
   },
   {
     name: "Spanish",
-    level: "B2",
+    level: "C1",
     colors: ["bg-red-600", "bg-yellow-400", "bg-red-600"],
   },
   {
